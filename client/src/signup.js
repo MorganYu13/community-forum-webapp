@@ -51,15 +51,15 @@ class Signup extends React.Component {
                 <label>
                 Username:
                 </label>
-                <input name="username" value={this.state.username} onChange={this.handleChange} type="text"/>
+                <input name="username" value={this.state.username} onChange={this.handleChange} type="text" required/>
                 <label>
                 Password:
                 </label>
-                <input name="password" value={this.state.password} onChange={this.handleChange} type="password"/>
+                <input name="password" value={this.state.password} onChange={this.handleChange} type="password" required/>
                 <label>
                 Reconfirm Password:
                 </label>
-                <input name="recpassword" value={this.state.recpassword} onChange={this.handleChange} type="password"/>
+                <input name="recpassword" value={this.state.recpassword} onChange={this.handleChange} type="password" required/>
                 <input type="submit" value="submit"/>
             </form>
         )
