@@ -2,16 +2,16 @@ const mc = require('mongodb')
 const url = 'mongodb://localhost:27017'
 
 
-const insertData = (data) => {
+const insertComment = (data) => {
     mc.connect(url, function(err, client){
         if (err) throw err; 
 
         var dbi = client.db("forum"); 
-        dbi.collection("users").insertOne(data, function(err,res){
+        dbi.collection("posts").insertOne(data, function(err,res){
             if (err) throw err; 
-            console.log("inserted user"); 
+            console.log("inserted comment"); 
         })
     })
 }
 
-module.exports = insertData; 
+module.exports = insertComment; 

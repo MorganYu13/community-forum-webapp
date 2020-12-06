@@ -9,6 +9,8 @@ const connectDB = require('./database/connectDB');
 const checkData = require('./database/checkData'); 
 const insertData = require('./database/insertData');
 
+const insertComment = require('./database/insertComment');
+const getComment = require('./database/getComment');
 
 connectDB(); //to connect to DB 
 
@@ -33,6 +35,22 @@ app.post("/api/login",(req,res) => {
 
 app.post("/api/signup",(req,res) => {
     insertData(req.body);
+})
+
+app.post("/api/homepage",(req,res) => {
+    console.log(res.cookie.username); 
+    insertComment(req.body); 
+})
+
+app.get("/api/homepage",(req,res) => {
+    getComment().then( function(posts){
+        res.send(posts);
+    })
+
+    .catch(() => {
+        res.sendStatus(500);
+        console.error("Couldnt Retrieve posts")
+    })
 })
 
 app.listen(port, () => console.log('Listening on port 5000'));

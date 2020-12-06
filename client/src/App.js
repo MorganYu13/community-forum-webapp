@@ -30,7 +30,7 @@ class App extends React.Component {
                       <Link to="/signup" style={linkstyle}>SIGN UP</Link>
                     </li>
                     <li style={liststyle}>
-                      <Link to="/" style={linkstyle}>HOME</Link>
+                      <Link to="/homepage" style={linkstyle}>HOME</Link>
                     </li>
                   </ul>
                 </nav>
@@ -42,7 +42,7 @@ class App extends React.Component {
                   <Route path="/signup">
                     <Signup/>
                   </Route>
-                  <Route path="/">
+                  <Route path="/homepage">
                     <Homepage/>
                   </Route>
                 </Switch>

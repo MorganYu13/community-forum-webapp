@@ -19,6 +19,11 @@ class Util{
             throw "failed";
         }
     }
+
+    static async getdata(url){
+        const response = await fetch(BASE_URL + url)
+        return await response.json();
+    }
 }   
 
 
