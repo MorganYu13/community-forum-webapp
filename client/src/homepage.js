@@ -48,8 +48,7 @@ class Homepage extends React.Component{
     render(){
         return(
             <div>
-                <h1>Forum | Posts </h1> 
-
+                <h1 id="banner">Join today to post your knowledge to the outside world <br></br> Add your posts in down below! </h1>
                 <div id="comment"> 
                     <form onSubmit={this.handleSubmit} inline>
                         <label>
@@ -65,11 +64,11 @@ class Homepage extends React.Component{
                 </div> 
 
                 <div id="posts">
-                    <button type="button" onClick={this.refreshPosts}>Refresh</button>
+                    <button type="button" onClick={this.refreshPosts}>Show comments posted</button>
                     {   this.state.posts.map(post => {
                             return(
-                              <div>
-                                <h1>{post.title}</h1>
+                              <div id="comments">
+                                <h3>{post.title}- by @{post.author}</h3> 
                                 <p>{post.comment}</p>
                               </div>    
                             )

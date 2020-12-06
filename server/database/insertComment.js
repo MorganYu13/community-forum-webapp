@@ -6,6 +6,8 @@ const insertComment = (data) => {
     mc.connect(url, function(err, client){
         if (err) throw err; 
 
+        console.log(data);  
+
         var dbi = client.db("forum"); 
         dbi.collection("posts").insertOne(data, function(err,res){
             if (err) throw err; 

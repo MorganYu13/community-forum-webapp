@@ -2,7 +2,10 @@ const express = require('express');
 const app = express(); 
 
 const bodyparse = require('body-parser'); 
-const cookie = require('cookie-parser');
+const cookies = require('cookie-parser');
+
+
+app.use(cookies()); 
 
 
 const connectDB = require('./database/connectDB'); 
@@ -38,7 +41,14 @@ app.post("/api/signup",(req,res) => {
 })
 
 app.post("/api/homepage",(req,res) => {
-    console.log(res.cookie.username); 
+    console.log(req.cookies.username); 
+
+    let author = req.cookies.username || "";
+    if (author == "") {
+        res.sendStatus(401);
+    }
+
+    req.body.author = author;
     insertComment(req.body); 
 })
 

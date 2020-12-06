@@ -5,32 +5,23 @@ var Link = ReactRouterDOM.Link;
 var Switch = ReactRouterDOM.Switch;
 
 
+
+
 class App extends React.Component {
     render(){
-      const linkstyle = {
-        textDecoration:"none", 
-        fontFamily:"Calibri",
-        font: "10px",
-        padding: "10px", 
-        margin: "5px",
-        color: "white"
-      }
-      const liststyle = {
-        backgroundColor: "lightblue",
-      }
         return (
             <Router>
               <div>
                 <nav>
-                  <ul style={{listStyleType: "none", margin:"0px", paddingLeft:"0px", textAlign: "right"}}>
-                    <li style={liststyle}>
-                      <Link to="/login" style={linkstyle}>LOG IN</Link>
+                  <ul>
+                    <li>
+                      <Link to="/login">LOG IN</Link>
                     </li>
-                    <li style={liststyle}>
-                      <Link to="/signup" style={linkstyle}>SIGN UP</Link>
+                    <li>
+                      <Link to="/signup">SIGN UP</Link>
                     </li>
-                    <li style={liststyle}>
-                      <Link to="/homepage" style={linkstyle}>HOME</Link>
+                    <li>
+                      <Link to="/">HOME</Link>
                     </li>
                   </ul>
                 </nav>
@@ -42,7 +33,7 @@ class App extends React.Component {
                   <Route path="/signup">
                     <Signup/>
                   </Route>
-                  <Route path="/homepage">
+                  <Route path="/">
                     <Homepage/>
                   </Route>
                 </Switch>

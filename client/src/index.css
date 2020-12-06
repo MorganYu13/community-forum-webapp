@@ -1,0 +1,121 @@
+*{
+  box-sizing: border-box;
+}    
+body {
+  background: url('https://i.pinimg.com/originals/3d/5f/ec/3d5fec685452952d83803092d71bbe87.gif') no-repeat;
+  background-position: center center;
+  width:100%;
+  height: 100%; 
+  margin: 0; 
+  font-family: 'Segoe UI', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lightblue;
+}
+  
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover {
+  background-color:lightcoral;
+}
+
+h1{
+    widows: 100%;
+    text-align: center;
+}
+
+#banner{
+    background-color: lightcoral;
+    color: white;
+    padding: 60px;
+    border-bottom: 25px lightpink double;
+}
+
+
+form{
+    padding:40px;
+    display: inline-block;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #posts{
+      padding:40px;
+  }
+
+  #posts > button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+  #posts > #comments{
+    
+    background-color: lightsteelblue;
+    color: white;
+    padding: 10px;
+    margin-top:20px; 
+    border-radius: 2px;
+    border-bottom: 7px rgb(243, 203, 209) solid;
+  }
+
+ 
