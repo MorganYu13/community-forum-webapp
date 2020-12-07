@@ -19,6 +19,7 @@ We would need some prequisites inorder to run the code
 
 #### Run the Code 
 cd to server file within project on cmd terminal, run ```npm start``` to start the server. 
-to connect to website add in http://localhost:5000/ to the address box to connect as client to the server/website
+
+To connect to website add in http://localhost:5000/ to the address box to connect as client to the server/website
 
 
