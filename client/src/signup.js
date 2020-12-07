@@ -47,21 +47,24 @@ class Signup extends React.Component {
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit} inline>
-                <label>
-                Username:
-                </label>
-                <input name="username" value={this.state.username} onChange={this.handleChange} type="text" required/>
-                <label>
-                Password:
-                </label>
-                <input name="password" value={this.state.password} onChange={this.handleChange} type="password" required/>
-                <label>
-                Reconfirm Password:
-                </label>
-                <input name="recpassword" value={this.state.recpassword} onChange={this.handleChange} type="password" required/>
-                <input type="submit" value="submit"/>
-            </form>
+            <div id="signup">
+                <h1 id="banner">Sign up to share your knowledge!</h1>
+                <form onSubmit={this.handleSubmit} inline>
+                    <label>
+                    Username:
+                    </label>
+                    <input name="username" value={this.state.username} onChange={this.handleChange} type="text" required/>
+                    <label>
+                    Password:
+                    </label>
+                    <input name="password" value={this.state.password} onChange={this.handleChange} type="password" required/>
+                    <label>
+                    Reconfirm Password:
+                    </label>
+                    <input name="recpassword" value={this.state.recpassword} onChange={this.handleChange} type="password" required/>
+                    <input type="submit" value="submit"/>
+                </form>
+            </div>
         )
     }
 }

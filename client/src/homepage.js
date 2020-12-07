@@ -47,9 +47,9 @@ class Homepage extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1 id="banner">Join today to post your knowledge to the outside world <br></br> Add your posts in down below! </h1>
-                <div id="comment"> 
+            <div id="homepage">
+                <div id="banner"> <h1>Join today to post your knowledge to the outside world. <br></br> Add your posts in down below! </h1> <h2>Please make sure you are signed in.</h2> </div>
+                <div id="post"> 
                     <form onSubmit={this.handleSubmit} inline>
                         <label>
                         Title:

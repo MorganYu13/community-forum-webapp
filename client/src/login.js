@@ -26,7 +26,7 @@ class Login extends React.Component {
         Util.postdata(
             '/api/login', {
                 username: this.state.username,
-                password:this.state.password
+                password: this.state.password
             }
         ).then(() => {
             alert("Log in successful")
@@ -42,17 +42,20 @@ class Login extends React.Component {
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit} inline>
-                <label>
-                Username:
-                </label>
-                <input name="username" value={this.state.username} onChange={this.handleChange} type="text"/>
-                <label>
-                Password:
-                </label>
-                <input name="password" value={this.state.password} onChange={this.handleChange} type="password"/>
-                <input type="submit" value="submit"/>
-            </form>
+            <div id="login">
+                <h1 id="banner">Login to Continue</h1>
+                <form onSubmit={this.handleSubmit} inline>
+                    <label>
+                    Username:
+                    </label>
+                    <input id="loginu" name="username" value={this.state.username} onChange={this.handleChange} type="text"/>
+                    <label>
+                    Password:
+                    </label>
+                    <input id="loginu" name="password" value={this.state.password} onChange={this.handleChange} type="password"/>
+                    <input type="submit" value="submit"/>
+                </form>
+            </div>
         )
     }
 
