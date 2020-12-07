@@ -18,6 +18,7 @@ We would need some prequisites inorder to run the code
 * MongoDB Compass for database UI 
 
 #### Run the Code 
-cd to server file within project on cmd terminal, run ```npm start``` to start the server 
+cd to server file within project on cmd terminal, run ```npm start``` to start the server. 
+to connect to website add in http://localhost:5000/ to the address box to connect as client to the server/website
 
 
